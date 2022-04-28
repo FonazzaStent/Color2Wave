@@ -78,24 +78,19 @@ def quit_hotkey(event):
 def pick_color():
     global color
     global RGBcolor
+    global pickcheck
+    global oldcolor
+    #RGBcolor=0
     color = colorchooser.askcolor(title ="Choose color")
     ColorDisplayFrame.configure(bg=color[1])
     colorconv=color[1]
     if str(colorconv)!=("None"):        
         RGBcolor= hex_to_rgb(colorconv)
-    pickcheck=1
+        oldcolor=colorconv
+        pickcheck=1
 
 def pick_color_frame(event):
-    global color
-    global RGBcolor
-    global pickcheck
-    RGBcolor=0
-    color = colorchooser.askcolor(title ="Choose color")
-    ColorDisplayFrame.configure(bg=color[1])
-    colorconv=color[1]
-    if str(colorconv)!=("None"):        
-        RGBcolor= hex_to_rgb(colorconv)
-    pickcheck=1
+    pick_color()
     
 #convert Hex to RGB
 def hex_to_rgb(value):
@@ -438,8 +433,12 @@ def generate_waveform():
     Save_File()
 
 def Save_File():
+    colorsave= str(color[1])
+    if colorsave=="None":
+        colorsave=oldcolor
     data=[('WAV', '*.wav')]
-    wavefile=asksaveasfilename(filetypes= data, defaultextension= data)
+    default_filename= colorsave
+    wavefile=asksaveasfilename(filetypes= data, defaultextension= data, initialfile=default_filename)
     if str(wavefile)!='':
         shutil.copy("waveformtrim",wavefile)
     os.remove("waveformtrim")
