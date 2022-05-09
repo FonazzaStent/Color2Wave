@@ -8,7 +8,7 @@ https://fonazzastent.com/synesthesia/
 https://fonazzastent.com/color/
 https://fonazzastent.com/overview/
 
-Unzip the archive to a folder, run the executable. The Windows executable will run on Windows systems with no addition software needed. If you want to run or compile the Python source code, you must install Python (www.python.org). The Python script also requires the Pydub libray and the FFMPEG codecs. Install them through the following commands inside a command line shell such as Windows Command Prompt or PowerShell (hotkey+R and enter "CMD" or "Powershell"):
+Unzip the archive to a folder, run the executable. The Windows executable will run on Windows systems with no additional software needed. If you want to run or compile the Python source code, you must install Python (www.python.org). The Python script also requires the Pydub libray and the FFMPEG codecs. Install them through the following commands inside a command line shell such as Windows Command Prompt or PowerShell (hotkey+R and enter "CMD" or "Powershell"):
 
 pip install pydub
 pip install python-ffmpeg or pip install ffmpeg
