@@ -7,6 +7,7 @@ import io
 import math
 from pydub import AudioSegment
 import shutil
+from tkinter import messagebox
 
 #init
 def init():
@@ -58,12 +59,12 @@ def create_menu():
     top.configure(menu=menubar)
     sub_menu=tk.Menu(top, tearoff=0)
     menubar.add_cascade(menu=sub_menu,compound="left", label="File")
-    sub_menu.add_command(compound="left",label="Choose Color", command=pick_color, accelerator="Ctrl+C")
-    sub_menu.add_command(compound="left",label="Generate Waveform", command=generate_waveform, accelerator="Ctrl+W")
-    sub_menu.add_command(compound="left",label="Quit", command=QuitApp, accelerator="Ctrl+Q")
-    top.bind_all("<Control-c>",pick_color_frame)
-    top.bind_all("<Control-w>",generate_wave_hotkey)
-    top.bind_all("<Control-q>",quit_hotkey)
+    sub_menu.add_command(compound="left",label="Choose Color", command=pick_color, accelerator="Alt+C")
+    sub_menu.add_command(compound="left",label="Generate Waveform", command=generate_waveform, accelerator="Alt+W")
+    sub_menu.add_command(compound="left",label="Quit", command=QuitApp, accelerator="Alt+Q")
+    top.bind_all("<Alt-c>",pick_color_frame)
+    top.bind_all("<Alt-w>",generate_wave_hotkey)
+    top.bind_all("<Alt-q>",quit_hotkey)
 
 
 #generate wave hotkey
@@ -445,7 +446,9 @@ def Save_File():
     
 #quit
 def QuitApp():
-    top.destroy()
+    okcancel= messagebox.askokcancel("Quit?","Do you want to quit the app?",default="ok")
+    if okcancel== True:
+        top.destroy()
 
 #main
 def main():

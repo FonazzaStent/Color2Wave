@@ -8,7 +8,7 @@ https://fonazzastent.com/synesthesia/
 https://fonazzastent.com/color/
 https://fonazzastent.com/overview/
 
-Unzip the archive to a folder, run the executable. The Windows executable will run on Windows systems with no additional software needed. If you want to run or compile the Python source code, you must install Python (www.python.org). The Python script also requires the Pydub libray and the FFMPEG codecs. Install them through the following commands inside a command line shell such as Windows Command Prompt or PowerShell (hotkey+R and enter "CMD" or "Powershell"):
+Unzip the archive to a folder, run the executable. The Windows executable will run on Windows systems with no addition software needed. If you want to run or compile the Python source code, you must install Python (www.python.org). The Python script also requires the Pydub libray and the FFMPEG codecs. Install them through the following commands inside a command line shell such as Windows Command Prompt or PowerShell (hotkey+R and enter "CMD" or "Powershell"):
 
 pip install pydub
 pip install python-ffmpeg or pip install ffmpeg
@@ -22,4 +22,4 @@ Copy path of folder where you installed FFMPEG, paste to the "path" textfield. C
 
 Instructions:
 
-Click on the color frame or CTRL-C or File-Choose Color to open the color chooser window. Pick your color with the mouse, or input Red/Green/Blue or Hue/Saturation/Lightness values. Click OK. The frame will display your color. Now click on File-Generate Waveform or CTRL-W to generate the waveform. A file dialog will open. Choose as folder and a file name for your waveform. The default filename is the HEX code of your color. You can now load this waveform into the synth oscillator to create an instrument of the selected color. 
+Click on the color frame or Alt-C or File-Choose Color to open the color chooser window. Pick your color with the mouse, or input Red/Green/Blue or Hue/Saturation/Lightness values. Click OK. The frame will display your color. Now click on File-Generate Waveform or Alt-W to generate the waveform. A file dialog will open. Choose as folder and a file name for your waveform. The default filename is the HEX code of your color. You can now load this waveform into the synth oscillator to create an instrument of the selected color. 
