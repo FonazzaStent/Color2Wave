@@ -66,6 +66,7 @@ def hex_field():
     hexfield.bind("<Return>",hexfield_choose)
     hexbutton.bind("<Button-1>",hexfield_choose)
     hexfield.focus_set()
+    hexfield.bind("<Button-3>", context_menu)
 
 #hexfield_choose
 def hexfield_choose(event):
@@ -104,6 +105,17 @@ def create_menu():
     top.bind_all("<Alt-w>",generate_wave_hotkey)
     top.bind_all("<Alt-q>",quit_hotkey)
 
+#PasteMenu
+def paste_text():
+        hexfield.event_generate(("<<Paste>>"))
+
+def context_menu(event):
+    menu = Menu(root, tearoff = 0)
+    menu.add_command(label="Paste", command=paste_text)
+    try: 
+        menu.tk_popup(event.x_root, event.y_root)
+    finally: 
+        menu.grab_release()
 
 #generate wave hotkey
 def generate_wave_hotkey(event):
