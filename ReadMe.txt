@@ -1,4 +1,4 @@
-Color to Waveform 1.1.0 - Turn words into colors.
+Color to Waveform 1.1.0 - Turn words into synth presets.
 Copyright (C) 2022  Fonazza-Stent
 
 This program is free software: you can redistribute it and/or modify
